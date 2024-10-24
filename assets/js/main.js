@@ -25,7 +25,7 @@ CSS TABLE OF CONTENTS
 ------------------------------------------------------------------*/
 
 (function ($) {
-	"use strict";
+	("use strict");
 
 	$(document).ready(function () {
 		//>> Mobile Menu Js Start <<//
@@ -330,8 +330,7 @@ CSS TABLE OF CONTENTS
 		});
 	}); // End Document Ready Function
 
-    //Price Range Slideer
-
+	//Price Range Slideer
 	document.addEventListener("DOMContentLoaded", function () {
 		const minSlider = document.getElementById("min-slider");
 		const maxSlider = document.getElementById("max-slider");
@@ -365,12 +364,42 @@ CSS TABLE OF CONTENTS
 		}
 
 		// Initialize the sliders and track with default values
-		updateAmount();
+		amount && updateAmount();
+
+		// if (minSlider && maxSlider) {
 
 		// Add event listeners for both sliders
-		minSlider.addEventListener("input", updateAmount);
-		maxSlider.addEventListener("input", updateAmount);
+		minSlider && minSlider.addEventListener("input", updateAmount);
+		maxSlider && maxSlider.addEventListener("input", updateAmount);
+		// }
 	});
+
+	//Cart Increment Decriemnt
+
+	// quntity increment and decrement
+	const quantityIncrement = document.querySelectorAll(".quantityIncrement");
+	const quantityDecrement = document.querySelectorAll(".quantityDecrement");
+	if (quantityIncrement && quantityDecrement) {
+		quantityIncrement.forEach((increment) => {
+			increment.addEventListener("click", function () {
+				const value = parseInt(
+					increment.parentElement.querySelector("input").value
+				);
+				increment.parentElement.querySelector("input").value = value + 1;
+			});
+		});
+
+		quantityDecrement.forEach((decrement) => {
+			decrement.addEventListener("click", function () {
+				const value = parseInt(
+					decrement.parentElement.querySelector("input").value
+				);
+				if (value > 1) {
+					decrement.parentElement.querySelector("input").value = value - 1;
+				}
+			});
+		});
+	}
 
 	function loader() {
 		$(window).on("load", function () {

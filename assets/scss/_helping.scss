@@ -178,18 +178,18 @@ br {
 		position: relative;
 		width: 100%;
 	}
-  .price-text{
-    label{
-      color: #1B1F2A;
-      font-size: 20px;
-      font-weight: 500;
-    }
-    input{
-      color: #1B1F2A;
-      font-size: 18px;
-      font-weight: 500;
-    }
-  }
+	.price-text {
+		label {
+			color: #1b1f2a;
+			font-size: 20px;
+			font-weight: 500;
+		}
+		input {
+			color: #1b1f2a;
+			font-size: 18px;
+			font-weight: 500;
+		}
+	}
 
 	.slider {
 		-webkit-appearance: none;
@@ -246,3 +246,81 @@ br {
 	}
 }
 //Price Range style
+
+//Cart Style style
+.common-table {
+	min-width: -moz-max-content;
+	min-width: max-content;
+	width: 100%;
+	overflow: hidden;
+	box-sizing: border-box;
+  .cart-item-thumb{
+    width: 86px;
+    .head{
+      color: #1B1F2A;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  .price-usd{
+    font-size: 16px;
+    font-weight: 500;
+    color: #666C78;
+  }
+  tr{
+    border-bottom: 1px solid #E4E4E5;
+  }
+}
+.common-table thead,
+.common-table tbody {
+	width: 100%;
+}
+.common-table thead tr,
+.common-table tbody tr {
+	width: 100%;
+	display: flex;
+	box-sizing: border-box;
+}
+.common-table thead tr th,
+.common-table thead tr td,
+.common-table tbody tr th,
+.common-table tbody tr td {
+	width: 100%;
+	box-sizing: border-box;
+}
+.common-table thead tr {
+	color: #1B1F2A;
+	border-bottom: unset;
+	border-radius: 16px 16px 0 0;
+  border-bottom: 1px solid #E4E4E5;
+}
+.common-table thead tr th {
+	background: unset;
+	color: unset;
+	border: unset;
+  font-size: 16px;
+  padding-bottom: 16px;
+}
+.common-table tbody tr td {
+	background: transparent;
+	color: unset;
+	box-sizing: border-box;
+	border-bottom: unset;
+}
+
+.quantity{
+  button{
+    i{
+      font-size: 16px;
+    }
+  }
+}
+.quantity .quantityValue {
+	width: 40px;
+	text-align: center;
+	padding: 0;
+  color: #000;
+  border: unset;
+}
+//Cart Style style
